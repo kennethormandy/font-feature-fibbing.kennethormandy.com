@@ -1,0 +1,93 @@
+<article class="liga">
+  <div class="px2 sm-px4 lg-px2 container">
+    <header class="mb4 clearfix">
+      <h1 class="h1 h1-responsive font-tisa"><%= title %></h1>
+      <p class="h2"><%= subtitle %> <a class="preface" data-content="—" href="https://twitter.com/kennethormandy">@kennethormandy</a></p>
+      <p><em><a href="https://github.com/kennethormandy/<%= name %>"><%= title %></a></em> helps you …</p>
+      <p>
+        <a class="btn btn-primary p2 sm-p3 h3" href="#usage">Get started</a>
+        <a class="btn bg-white    p2 sm-p3 h3 brown" href="https://github.com/kennethormandy/<%= name %>">Star on GitHub</a>
+      </p>
+    </header>
+    <section class="clearfix" id="liga">
+      <h2><a href="#liga" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Documentation</h2>
+      <p>Things</p>
+      <p>Using an example:</p>
+      <pre class="h4 bg-navy silver p2 language-css">
+<code>var fibbing = require('font-feature-fibbing')
+
+console.log(fibbing)
+</code></pre>
+    </section>
+    <section class="clearfix" id="request">
+      <h2><a href="#request" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Feature requests</h2>
+      <a class="block mb3 mt3 p1 sm-p2 md-p3 rounded bg-silver black h2 p4 block" href="https://github.com/kennethormandy/<%= name %>/issues">Think something is missing? Submit an issue or feature request on GitHub and <span class="brown">let’s talk about it</span>!</a>
+    </section>
+    <section class="clearfix" id="design-decisions">
+      <h2><a href="#design-decisions" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Design decisions</h2>
+      <p>TODO
+      <blockquote>Things
+        <footer><span class="preface" data-content="—">Someone</span>, <a href="#"><cite>Something</cite></a></footer>
+      </blockquote>
+      <p>TODO</p>
+
+    </section>
+    <section class="clearfix" id="usage">
+      <h2><a href="#usage" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Usage</h2>
+      <p><%= title %> is ready to use with Browserify, Webpack, <span class="caps onum">ES2015</span>, or vanilla <abbr class="caps">JS</abbr>. If you’re using any of the former, install it through npm:</p>
+      <pre class="h4 bg-navy silver p2 language-sh"><code><span class="select-none token punctuation">$&nbsp;</span>npm install --save <%= name %></code></pre>
+      <p>Then, include it within your source files:</p>
+      <pre class="h4 bg-navy silver p2 language-js"><code>var supportsFontFeatureSettings = require('<%= name %>')</code></pre>
+      <p>Or, if you’re using <span class="caps onum">ES2015</span>:</p>
+      <pre class="h4 bg-navy silver p2 language-js"><code>import supportsFontFeatureSettings from <%= name %></code></pre>
+      <p>You’re ready to do something based on the result:</p>
+      <pre class="h4 bg-navy silver p2 language-js"><code>if (!supportsFontFeatureSettings()) {
+  // Add a class to `&lt;html&gt;`
+  document.documentElement.className += ' is-withoutFontFeatureSettings';
+}</code></pre>
+      <p>This is a tiny script, so the most efficient way to use it is by including it in a larger JS project. If you need to use the <abbr class="caps">JS</abbr> directly, download the <a href="https://github.com/kennethormandy/<%= name %>">latest version of the compiled file</a>, or reference the hosted <abbr class="caps">CDN</abbr> version in your <abbr class="caps">HTML</abbr>:</p>
+      <pre class="h4 bg-navy silver p2 language-html"><code>&lt;link href=&quot;https://cdn.rawgit.com/kennethormandy/<%= name %>/master/TODO&quot;&gt;</code></pre>
+    </section>
+    <section class="clearfix" id="examples">
+      <h2><a href="#examples" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Examples</h2>
+      <p>TODO</p>
+      <ul>
+        <li>1403 Vintage Mono Pro – Fallback SVG</li>
+        <li>Type Tester – Show a message</li>
+        <li>CanIUse? – Listed as a fix for this <code>@supports</code> bug</li>
+      </ul>
+    </section>
+    <section class="clearfix" id="browser-support">
+      <h2><a href="#browser-support" class="font-tisa anchor speak-none select-none" aria-hidden="true">¶</a>Browser support</h2>
+      <p>TODO</p>
+    </section>
+    <% include _includes/newsletter.ejs %>
+  </div>
+  <footer class="mt4 bg-brown a-alt">
+    <div class="bg-lighten-3">
+      <div class="px2 py4 container">
+        <% /*
+        <h3 id="works-cited">Works Cited</h3>
+        <ul>
+          <li><a href="http://practicaltypography.com/small-caps.html"><cite>Butterick’s Practical Typography</cite></a> Matthew Butterick</li>
+          <li><a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers_-_tests"><cite>OpenType features in web browsers</cite></a> Gustavo Ferreira</li>
+          <li><a href="http://www.basscss.com/docs/reference/principles/"><cite>Basscss Design Principles</cite></a> Brent Jackson</li>
+          <li><a href="https://www.microsoft.com/typography/otspec/"><cite>OpenType specification</span></a> Microsoft, et al.</li>
+          <li><a href="http://stateofwebtype.com/"><cite>State of Web Type</cite></a> Bram Stein</li>
+          <li><a href="https://www.typotheque.com/fonts/echo/features"><cite>Echo font family, OpenType font features</cite></a> Typotheque</li>
+        </ul>
+        */ %>
+        <h3 id="thanks">Thanks</h3>
+        <p>Thanks to <a href="https://twitter.com/quitequinn">Jeff Kellem</a> for his contributions to this script.</p>
+        <p>If you’re interested in contributing to this project, <a href="https://github.com/kennethormandy/<%= name %>">the <abbr class="caps">CSS</abbr></a> and <a href="https://github.com/kennethormandy/<%= name %>.kennethormandy.com">the documentation</a> are open source.
+        <h3 id="colophon">Colophon</h3>
+        <p>Site set in <a href="https://www.fontshop.com/superfamilies/ff-tisa"><abbr class="caps">FF</abbr> Tisa <span class="caps">&amp;</span> <abbr class="caps">FF</abbr> Tisa Sans</a> by Mitja Miklavčič, served by Typekit. Wordmark set in <a href="http://www.losttype.com/font/?name=dude">Dude</a> and <a href="http://www.losttype.com/font/?name=hankpro">Dude Hank Pro</a>, designed by Dan “Grayhood” Gneiding, available through <a href="http://losttype.com">Lost Type</a>.</p>
+        <p>Designed and developed by <a href="http://twitter.com/kennethormandy">Kenneth Ormandy</a>. Documentation built with <a href="http://harpjs.com">Harp</a> and deployed on <a href="https://surge.sh">Surge.sh</a>.</p>
+      </div>
+    </div>
+    <a href="https://github.com/kennethormandy/<%= name %>" class="center block">
+      <div class="px2 py3 container">View Source</div>
+    </a>
+  </footer>
+</article>
+<script src="/js/index.js"></script>

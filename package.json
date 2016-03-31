@@ -1,0 +1,24 @@
+{
+  "name": "font-feature-fibbing.kennethormandy.com",
+  "homepage": "http://font-feature-fibbing.kennethormandy.com",
+  "author": "Kenneth Ormandy <hello@kennethormandy.com> (http://kennethormandy.com)",
+  "dependencies": {
+    "basscss-sass": "3.0.0",
+    "fg-loadcss": "0.2.4",
+    "fontfaceobserver": "1.6.2",
+    "smoothscroll": "0.2.2",
+    "utility-opentype": "0.1.3"
+  },
+  "devDependencies": {
+    "font-feature-fibbing": "^0.4.1",
+    "harp": "github:kennethormandy/terraform#v0.21.1",
+    "surge": "latest",
+    "typogr": "0.6.6"
+  },
+  "scripts": {
+    "postinstall": "cat ./public/_includes/prefix.jade ./node_modules/typogr/typogr.min.js | tr -d \"\r\n\" > ./node_modules/typogr/typogr.jade",
+    "start": "harp server",
+    "compile": "harp compile",
+    "deploy": "npm run compile && surge ./www $npm_package_name"
+  }
+}
